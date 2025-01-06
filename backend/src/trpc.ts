@@ -1,25 +1,19 @@
-import { initTRPC } from '@trpc/server';
-import { inferAsyncReturnType } from '@trpc/server';
-import { CreateExpressContextOptions } from '@trpc/server/adapters/express';
+import { initTRPC } from '@trpc/server'
 
-// Создайте контекст
-export const createContext = ({ req, res }: CreateExpressContextOptions) => {
-  return { req, res };
-};
-type Context = inferAsyncReturnType<typeof createContext>;
+const ideas = [
+  { nick: 'cool-idea-nick-1', name: 'Idea 1', description: 'Description of idea 1...' },
+  { nick: 'cool-idea-nick-2', name: 'Idea 2', description: 'Description of idea 2...' },
+  { nick: 'cool-idea-nick-3', name: 'Idea 3', description: 'Description of idea 3...' },
+  { nick: 'cool-idea-nick-4', name: 'Idea 4', description: 'Description of idea 4...' },
+  { nick: 'cool-idea-nick-5', name: 'Idea 5', description: 'Description of idea 5...' },
+]
 
-const t = initTRPC.context<Context>().create();
+const trpc = initTRPC.create()
 
-// Создайте маршруты (routers)
-export const TrpcRouter = t.router({
-  getIdeas: t.procedure.query(() => {
-    return {
-      ideas: [
-        { id: 1, title: 'Idea 1', description: 'Description 1' },
-        { id: 2, title: 'Idea 2', description: 'Description 2' },
-      ],
-    };
+export const trpcRouter = trpc.router({
+  getIdeas: trpc.procedure.query(() => {
+    return { ideas }
   }),
-});
+})
 
-export type AppRouter = typeof TrpcRouter;
+export type TrpcRouter = typeof trpcRouter
