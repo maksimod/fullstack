@@ -1,5 +1,9 @@
 {
 	"name": "vscode_frontend",
 	"private": true,
-	"version": "0.0.0"
+	"version": "0.0.0",
+	"devDependencies": {
+		"@tanstack/react-query": "4.36.1",
+		"@trpc/react-query": "^10.45.2"
+	}
 }

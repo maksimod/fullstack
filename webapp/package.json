@@ -11,10 +11,8 @@
     "prettify": "prettier --loglevel warn --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}' '!**/{node_modules,dist}/**/*'"
   },
   "dependencies": {
-    "@vscode_frontend/backend": "workspace:*",
-    "@tanstack/react-query": "^5.62.15",
     "@trpc/client": "^10.45.2",
-    "@trpc/react-query": "^10.45.2",
+    "@vscode_frontend/backend": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
