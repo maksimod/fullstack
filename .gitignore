@@ -1,7 +1,5 @@
-node_modules
-# Создайте файл .gitignore с этим содержимым
-echo "node_modules/
+node_modules/
 .env
 dist/
 build/
-.DS_Store" > .gitignore
+.DS_Store
