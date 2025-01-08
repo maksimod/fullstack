@@ -1,0 +1,31 @@
+extends:
+  - react-app
+  - ../.eslintrc.yml
+parserOptions:
+  project: ./tsconfig.json
+overrides:
+  - files:
+      - vite.config.ts
+    parserOptions:
+      project: ./tsconfig.node.json
+# extends:
+#   - react-app
+#   - ../.eslintrc.yml
+# parserOptions:
+#   ecmaVersion: 2021
+#   sourceType: module
+#   ecmaFeatures:
+#     jsx: true
+#   project: ['./tsconfig.app.json', './tsconfig.node.json']
+# settings:
+#   react:
+#     version: detect
+# rules:
+#   '@typescript-eslint/no-unused-vars': warn
+#   'react-hooks/rules-of-hooks': error
+#   'react-hooks/exhaustive-deps': warn
+# overrides:
+#   - files:
+#       - 'vite.config.ts'
+#     parserOptions:
+#       project: './tsconfig.node.json'

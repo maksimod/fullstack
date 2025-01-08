@@ -9,9 +9,10 @@
 		"@typescript-eslint/eslint-plugin": "^8.19.1",
 		"@typescript-eslint/parser": "^8.19.1",
 		"concurrently": "^9.1.2",
-		"eslint": "^8.56.0",
+		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-config-react-app": "^7.0.1",
+		"eslint-config-standard-with-typescript": "^43.0.1",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"i": "^0.3.7",
@@ -26,6 +27,7 @@
 		"w": "pnpm --filter @vscode_frontend/webapp",
 		"dev": "pnpm -r --parallel dev",
 		"types": "concurrently 'pnpm w types' 'pnpm b types'",
-		"prettify": "pnpm -r --parallel prettify"
+		"prettify": "pnpm -r --parallel prettify",
+		"lint": "concurrently 'pnpm b lint' 'pnpm w lint'"
 	}
 }
