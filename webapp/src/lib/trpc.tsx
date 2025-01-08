@@ -1,4 +1,4 @@
-import type { TrpcRouter } from '@ideanick/backend/src/trpc'
+import type { TrpcRouter } from '@vscode_frontend/backend/src/trpc'
 import { createTRPCReact } from '@trpc/react-query'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { httpBatchLink } from '@trpc/client'
