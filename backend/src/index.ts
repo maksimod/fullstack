@@ -5,10 +5,9 @@ import cors from 'cors' // Добавьте этот импорт
 
 const expressApp = express()
 
-// Добавьте CORS middleware
 expressApp.use(
   cors({
-    origin: 'http://localhost:5173', // URL вашего фронтенда
+    origin: ['http://localhost:5173', 'http://localhost:5174'],
     credentials: true,
   }),
 )
