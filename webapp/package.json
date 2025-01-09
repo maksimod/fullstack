@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx .",
-    "lint:fix": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx . --fix",
     "preview": "vite preview",
     "types": "tsc -b --force",
     "prettify": "prettier --loglevel warn --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}' '!**/{node_modules,dist}/**/*'"
