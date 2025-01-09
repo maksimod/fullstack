@@ -19,6 +19,6 @@ settings:
     version: detect
 overrides:
   - files:
-      - "vite.config.ts"
+      - 'vite.config.ts'
     parserOptions:
-      project: "./tsconfig.node.json"
+      project: './tsconfig.node.json'
