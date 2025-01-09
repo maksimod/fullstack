@@ -13,7 +13,9 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-promise": "^6.0.0",
+    "husky": "^9.1.7",
     "i": "^0.3.7",
+    "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
@@ -27,6 +29,7 @@
     "types": "concurrently 'pnpm w types' 'pnpm b types'",
     "prettify": "pnpm -r --parallel prettify",
     "lint": "concurrently 'pnpm b lint' 'pnpm w lint'",
-    "lint:fix": "concurrently 'pnpm b lint:fix' 'pnpm w lint:fix'"
+    "lint:fix": "concurrently 'pnpm b lint:fix' 'pnpm w lint:fix'",
+    "prepare": "husky"
   }
 }
