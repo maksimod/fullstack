@@ -1,2 +1,7 @@
+# parserOptions:
+#   project: ./tsconfig.json
+
+extends:
+  - ../.eslintrc.yml
 parserOptions:
   project: ./tsconfig.json
