@@ -1,8 +1,8 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "never"
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "eslint.enable": true,
   "eslint.debug": true,
   "eslint.lintTask.enable": true,
