@@ -3,7 +3,7 @@ import { getAllIdeasRoute, getViewIdeaRoute } from './lib/routes'
 import { TrpcProvider } from './lib/trpc'
 import { AllIdeasPage } from './pages/AllIdeasPage'
 import { ViewIdeaPage } from './pages/ViewIdeaPage'
-
+// comment
 export const App = () => {
   return (
     <TrpcProvider>
