@@ -1,5 +1,6 @@
-@import 'reset-css';
-@import './_vars.scss';
+// @import 'reset-css';
+@import '../../../node_modules/reset-css/reset.css';
+@import './_vars';
 
 html,
 body,
