@@ -1,0 +1,30 @@
+@use '../../styles/vars' as *;
+@use '../../styles/mixins' as mix;
+@use 'include-media' as *;
+
+.title {
+  @include mix.h1; // Добавляем префикс mix.
+}
+
+.ideas {
+  .idea {
+    padding: 20px;
+    border: 1px solid $black;
+    border-radius: 10px;
+    & + .idea {
+      margin-top: 20px;
+    }
+
+    .ideaName {
+      @include mix.h2; // Добавляем префикс mix.
+
+      .ideaLink {
+        @include mix.link; // Добавляем префикс mix.
+      }
+    }
+
+    .ideaDescription {
+      font-size: 18px;
+    }
+  }
+}
