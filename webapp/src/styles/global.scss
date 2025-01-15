@@ -1,17 +1,4 @@
-// @use "./vars" as *;
-// @use "reset-css/sass/reset";
-
-// body {
-//   font-family: $defaultFontFamily;
-//   font-size: $defaultFontSize;
-//   line-height: $defaultLineHeight;
-//   background-color: $defaultBackgroundColor;
-//   color: $defaultTextColor;
-// }
-
-// @import '../../node_modules/reset-css/sass/_reset.css';
 @import 'reset-css';
-// @import '../../node_modules/reset-css/sass/_reset.scss';
 @import './_vars.scss';
 
 html,

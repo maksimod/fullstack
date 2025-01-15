@@ -1,9 +1,8 @@
-@use '../../styles/vars' as *;
-@use '../../styles/mixins' as mix;
-@use 'include-media' as *;
+@import '../../styles/_vars.scss';
+@import '../../styles/_mixins.scss';
 
 .title {
-  @include mix.h1; // Добавляем префикс mix.
+  @include h1;
 }
 
 .ideas {
@@ -16,10 +15,10 @@
     }
 
     .ideaName {
-      @include mix.h2; // Добавляем префикс mix.
+      @include h2;
 
       .ideaLink {
-        @include mix.link; // Добавляем префикс mix.
+        @include link;
       }
     }
 
