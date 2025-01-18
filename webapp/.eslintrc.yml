@@ -11,3 +11,13 @@ overrides:
       - 'vite.config.ts'
     parserOptions:
       project: './tsconfig.node.json'
+rules:
+  '@typescript-eslint/no-restricted-imports':
+    - error
+    - patterns:
+        - group:
+            - '@vscode_frontend/backend/**'
+            - '!@vscode_frontend/backend/**/'
+            - '!@vscode_frontend/backend/**/input'
+          allowTypeImports: true
+          message: 'Only types and input schemas are allowed to be imported from backend workspace'
