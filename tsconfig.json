@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "./node_modules/.cache/tsbuildinfo",
     "noEmit": true,
     "module": "ESNext",
     "target": "ESNext",
