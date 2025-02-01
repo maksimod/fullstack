@@ -26,7 +26,7 @@
     "b": "pnpm --filter @vscode_frontend/backend",
     "w": "pnpm --filter @vscode_frontend/webapp",
     "dev": "pnpm -r --parallel dev",
-    "types": "concurrently 'pnpm w types' 'pnpm b types'",
+    "types": "concurrently 'pnpm w types' 'pnpm b types' --noEmit",
     "prettify": "pnpm -r --parallel prettify",
     "lint": "concurrently 'pnpm b lint' 'pnpm w lint'",
     "lint:fix": "concurrently 'pnpm b lint:fix' 'pnpm w lint:fix'",
