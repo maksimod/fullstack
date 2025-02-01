@@ -2,7 +2,7 @@ extends:
   - react-app
   - ../.eslintrc.yml
 parserOptions:
-  project: ./tsconfig.app.json
+  project: ./tsconfig.json
 settings:
   react:
     version: detect
