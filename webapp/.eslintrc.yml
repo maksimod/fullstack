@@ -19,5 +19,6 @@ rules:
             - '@vscode_frontend/backend/**'
             - '!@vscode_frontend/backend/**/'
             - '!@vscode_frontend/backend/**/input'
+            - '!@vscode_frontend/backend/src/utils/can'
           allowTypeImports: true
           message: 'Only types and input schemas are allowed to be imported from backend workspace'
