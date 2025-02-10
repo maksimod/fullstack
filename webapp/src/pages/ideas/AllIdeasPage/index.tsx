@@ -14,7 +14,7 @@ import { trpc } from '../../../lib/trpc'
 import css from './index.module.scss'
 
 export const AllIdeasPage = withPageWrapper({
-  title: 'IdeaNick',
+  title: 'MyOwnWorldProject',
   isTitleExact: true,
 })(() => {
   const { formik } = useForm({

@@ -139,7 +139,7 @@ const PageWrapper = <TProps extends Props = {}, TQueryResult extends QueryResult
       getAuthorizedMe,
     }) as TProps
     const calculatedTitle = typeof title === 'function' ? title({ ...helperProps, ...props }) : title
-    const exactTitle = isTitleExact ? calculatedTitle : `${calculatedTitle} — IdeaNick`
+    const exactTitle = isTitleExact ? calculatedTitle : `MyOwnWorldProject — ${calculatedTitle}`
     return (
       <>
         <Helmet>
