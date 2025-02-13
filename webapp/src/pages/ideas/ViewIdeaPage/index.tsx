@@ -67,6 +67,13 @@ const BlockIdea = ({ idea }: { idea: NonNullable<TrpcRouterOutput['getIdea']['id
   )
 }
 
+const formatText = (text: string) => {
+  return text
+    .split('\n')
+    .map((line) => line.replace(/\t/g, '&emsp;'))
+    .join('<br />')
+}
+
 export const ViewIdeaPage = withPageWrapper({
   useQuery: () => {
     const { ideaNick } = useParams() as ViewIdeaRouteParams
@@ -87,7 +94,7 @@ export const ViewIdeaPage = withPageWrapper({
       Author: {idea.author.nick}
       {idea.author.name ? ` (${idea.author.name})` : ''}
     </div>
-    <div className={css.text} dangerouslySetInnerHTML={{ __html: idea.text }} />
+    <div className={css.text} dangerouslySetInnerHTML={{ __html: formatText(idea.text) }} />
     <div className={css.likes}>
       Pain: {idea.likesCount}
       {me && (
