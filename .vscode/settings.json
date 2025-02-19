@@ -7,16 +7,7 @@
   "eslint.debug": true,
   "eslint.lintTask.enable": true,
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "eslint.workingDirectories": [
-    {
-      "directory": "./webapp",
-      "changeProcessCWD": true
-    },
-    {
-      "directory": "./backend",
-      "changeProcessCWD": true
-    }
-  ],
+  "eslint.workingDirectories": ["backend", "webapp", "shared"],
   "files.autoSave": "onFocusChange",
   "typescript.tsdk": "node_modules/typescript/lib"
 }

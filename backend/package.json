@@ -36,6 +36,7 @@
     "@prisma/client": "^6.2.1",
     "@trpc/server": "^10.45.2",
     "@vscode_frontend/webapp": "workspace:*",
+    "@vscode_frontend/shared": "workspace:*",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "cron": "^4.0.0",

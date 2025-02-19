@@ -17,6 +17,7 @@
     "@trpc/client": "^10.45.2",
     "@trpc/react-query": "^10.45.2",
     "@vscode_frontend/backend": "workspace:*",
+    "@vscode_frontend/shared": "workspace:*",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "formik": "^2.4.6",

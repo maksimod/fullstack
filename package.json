@@ -28,10 +28,11 @@
   "scripts": {
     "b": "pnpm --filter @vscode_frontend/backend",
     "w": "pnpm --filter @vscode_frontend/webapp",
+    "sh": "pnpm --filter @vscode_frontend/shared",
     "dev": "pnpm -r --parallel dev",
-    "types": "concurrently 'pnpm w types' 'pnpm b types' --noEmit",
+    "types": "concurrently 'pnpm b types' 'pnpm w types' 'pnpm sh types'",
     "prettify": "pnpm -r --parallel prettify",
-    "lint": "concurrently 'pnpm b lint' 'pnpm w lint'",
+    "lint": "concurrently 'pnpm b lint' 'pnpm w lint' 'pnpm sh lint'",
     "lint:fix": "concurrently 'pnpm b lint:fix' 'pnpm w lint:fix'",
     "prepare": "husky"
   }
