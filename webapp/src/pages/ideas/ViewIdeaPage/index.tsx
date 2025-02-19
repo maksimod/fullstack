@@ -1,7 +1,6 @@
 import type { TrpcRouterOutput } from '@vscode_frontend/backend/src/router'
 import { canBlockIdeas, canEditIdea } from '@vscode_frontend/backend/src/utils/can'
 import { format } from 'date-fns/format'
-import { useParams } from 'react-router-dom'
 import { Alert } from '../../../components/Alert'
 import { Button, LinkButton } from '../../../components/Button'
 import { FormItems } from '../../../components/FormItems'
@@ -9,7 +8,7 @@ import { Icon } from '../../../components/Icon'
 import { Segment } from '../../../components/Segment'
 import { useForm } from '../../../lib/form'
 import { withPageWrapper } from '../../../lib/pageWrapper'
-import { getEditIdeaRoute, type ViewIdeaRouteParams } from '../../../lib/routes'
+import { getEditIdeaRoute, getViewIdeaRoute } from '../../../lib/routes'
 import { trpc } from '../../../lib/trpc'
 import css from './index.module.scss'
 
@@ -76,7 +75,7 @@ const formatText = (text: string) => {
 
 export const ViewIdeaPage = withPageWrapper({
   useQuery: () => {
-    const { ideaNick } = useParams() as ViewIdeaRouteParams
+    const { ideaNick } = getViewIdeaRoute.useParams()
     return trpc.getIdea.useQuery({
       ideaNick,
     })
