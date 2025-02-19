@@ -24,10 +24,10 @@ void (async () => {
     applyCron(ctx)
     await applyTrpcToExpressApp(expressApp, ctx, trpcRouter)
     expressApp.listen(env.PORT, () => {
-      logger.info(`Listening at http://localhost:${env.PORT}`)
+      logger.info('express', `Listening at http://localhost:${env.PORT}`)
     })
   } catch (error) {
-    logger.error(error)
+    logger.error('app', error)
     await ctx?.stop()
   }
 })()
