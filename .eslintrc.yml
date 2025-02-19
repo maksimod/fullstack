@@ -13,6 +13,7 @@ parser: '@typescript-eslint/parser'
 parserOptions:
   project: true
 rules:
+  no-new: off
   # оставляем ваши текущие правила без изменений
   import/order:
     - error
