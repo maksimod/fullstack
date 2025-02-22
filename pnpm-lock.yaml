@@ -78,8 +78,8 @@ importers:
         specifier: ^6.2.1
         version: 6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3)
       '@sentry/integrations':
-        specifier: ^7.114.0
-        version: 7.114.0
+        specifier: 7.70.0
+        version: 7.70.0
       '@sentry/node':
         specifier: ^9.1.0
         version: 9.1.0
@@ -166,8 +166,8 @@ importers:
         version: 3.24.1
     devDependencies:
       '@sentry/cli':
-        specifier: ^2.42.1
-        version: 2.42.1
+        specifier: 2.21.1
+        version: 2.21.1
       '@types/cors':
         specifier: ^2.8.17
         version: 2.8.17
@@ -199,8 +199,8 @@ importers:
         specifier: 1.3.3
         version: 1.3.3
       dotenv-cli:
-        specifier: ^8.0.0
-        version: 8.0.0
+        specifier: 7.3.0
+        version: 7.3.0
       eslint-plugin-node:
         specifier: ^11.1.0
         version: 11.1.0(eslint@8.57.1)
@@ -1888,19 +1888,8 @@ packages:
     engines: {node: '>=10'}
     os: [darwin]
 
-  '@sentry/cli-darwin@2.42.1':
-    resolution: {integrity: sha512-WZFsrzSWtsRK24SiTa+Xod+4Hjlw7xaggmM4lbuo0lISO1EQj+K29jyGX+Ku0qflO1qp1z32bSP/RlWx/1rBjg==}
-    engines: {node: '>=10'}
-    os: [darwin]
-
   '@sentry/cli-linux-arm64@2.41.1':
     resolution: {integrity: sha512-EzYCEnnENBnS5kpNW+2dBcrPZn1MVfywh2joGVQZTpmgDL5YFJ59VOd+K0XuEwqgFI8BSNI14KXZ75s4DD1/Vw==}
-    engines: {node: '>=10'}
-    cpu: [arm64]
-    os: [linux, freebsd]
-
-  '@sentry/cli-linux-arm64@2.42.1':
-    resolution: {integrity: sha512-8A43bLvDIzquCXblHNadaRm109ANw1Q9VRXg5qLYv7DrPkUm2oQP+oRnuNUgOJ3W/8QQSvANpG9pPko+mJs4xw==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux, freebsd]
@@ -1911,20 +1900,8 @@ packages:
     cpu: [arm]
     os: [linux, freebsd]
 
-  '@sentry/cli-linux-arm@2.42.1':
-    resolution: {integrity: sha512-3xR2B9v8e7NjB6U9+oMu2puR3xOv/Axd7qNuUrZxQnNZYtgtnAqIDgSmFTWHOOoged1+AZXe+xDWLN0Y11Q03Q==}
-    engines: {node: '>=10'}
-    cpu: [arm]
-    os: [linux, freebsd]
-
   '@sentry/cli-linux-i686@2.41.1':
     resolution: {integrity: sha512-urpQCWrdYnSAsZY3udttuMV88wTJzKZL10xsrp7sjD/Hd+O6qSLVLkxebIlxts70jMLLFHYrQ2bkRg5kKuX6Fg==}
-    engines: {node: '>=10'}
-    cpu: [x86, ia32]
-    os: [linux, freebsd]
-
-  '@sentry/cli-linux-i686@2.42.1':
-    resolution: {integrity: sha512-YBz6prKqh1i0gzTg3Rus8ALQWmAk5Acap2U2dGuVYgTt7Bbu6SJbxNC9d8j3RUGu7ylupofUEMqKd391mTHf7g==}
     engines: {node: '>=10'}
     cpu: [x86, ia32]
     os: [linux, freebsd]
@@ -1935,20 +1912,8 @@ packages:
     cpu: [x64]
     os: [linux, freebsd]
 
-  '@sentry/cli-linux-x64@2.42.1':
-    resolution: {integrity: sha512-Rvc6Jy3kLZrcyO7Ysy1gj0iQi0nGVUN79VqC3OO9JDV44aDtKBDYuBkeFKE3gd1SL8EvPetKH85en2u2wdWxYg==}
-    engines: {node: '>=10'}
-    cpu: [x64]
-    os: [linux, freebsd]
-
   '@sentry/cli-win32-i686@2.41.1':
     resolution: {integrity: sha512-AuRimCeVsx99DIOr9cwdYBHk39tlmAuPDdy2r16iNzY0InXs4xOys4gGzM7N4vlFQvFkzuc778Su0HkfasgprA==}
-    engines: {node: '>=10'}
-    cpu: [x86, ia32]
-    os: [win32]
-
-  '@sentry/cli-win32-i686@2.42.1':
-    resolution: {integrity: sha512-FC8FE6dk+G83PCO09Ux/9NJNouF5yXKhpzLV5BZkqQye39hV9GDrFTu+VWTnwI1P77fnaJkPEEKRkjwNiPGjLA==}
     engines: {node: '>=10'}
     cpu: [x86, ia32]
     os: [win32]
@@ -1959,32 +1924,22 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sentry/cli-win32-x64@2.42.1':
-    resolution: {integrity: sha512-1595wD7JQSu5J9pA4m/B3WrjjIXltSV9VzuErehvanBvfusQ/YgBcvsNzgIf8aJsgSAYGbpR3Zqu81pjohdjgA==}
-    engines: {node: '>=10'}
-    cpu: [x64]
-    os: [win32]
+  '@sentry/cli@2.21.1':
+    resolution: {integrity: sha512-iJGL818zHzVb129CNWLoZriymq2nrnhk1XqN4Fh0AMxYJcOICmXYKR8RSkLhhE1U1J1D77UzA+FyBhWHOFA82A==}
+    engines: {node: '>= 10'}
+    hasBin: true
 
   '@sentry/cli@2.41.1':
     resolution: {integrity: sha512-0GVmDiTV7R1492wkVY4bGcfC0fSmRmQjuxaaPI8CIV9B2VP9pBVCUizi1mevXaaE4I3fM60LI+XYrKFEneuVog==}
     engines: {node: '>= 10'}
     hasBin: true
 
-  '@sentry/cli@2.42.1':
-    resolution: {integrity: sha512-3fonGZoGwlze/iGYDdCJXpG5skXc6j/yYom+k6TqVvJJqSct1RgLJHjCw1P0IxHsR8pNz9f1H85OdLXKxrc6sw==}
-    engines: {node: '>= 10'}
-    hasBin: true
-
-  '@sentry/core@7.114.0':
-    resolution: {integrity: sha512-YnanVlmulkjgZiVZ9BfY9k6I082n+C+LbZo52MTvx3FY6RE5iyiPMpaOh67oXEZRWcYQEGm+bKruRxLVP6RlbA==}
-    engines: {node: '>=8'}
-
   '@sentry/core@9.1.0':
     resolution: {integrity: sha512-djWEzSBpMgqdF3GQuxO+kXCUX+Mgq42G4Uah/HSUBvPDHKipMmyWlutGRoFyVPPOnCDgpHu3wCt83wbpEyVmDw==}
     engines: {node: '>=18'}
 
-  '@sentry/integrations@7.114.0':
-    resolution: {integrity: sha512-BJIBWXGKeIH0ifd7goxOS29fBA8BkEgVVCahs6xIOXBjX1IRS6PmX0zYx/GP23nQTfhJiubv2XPzoYOlZZmDxg==}
+  '@sentry/integrations@7.70.0':
+    resolution: {integrity: sha512-ffIEuiElROzl4IpYX0O7vtPaadXVycPtyjq86YTHjd2TUFcYuQTPBm5UjEVE0/sSNNCdfWYxNThU/fVyq93l1g==}
     engines: {node: '>=8'}
 
   '@sentry/node@9.1.0':
@@ -2008,12 +1963,12 @@ packages:
     peerDependencies:
       react: ^16.14.0 || 17.x || 18.x || 19.x
 
-  '@sentry/types@7.114.0':
-    resolution: {integrity: sha512-tsqkkyL3eJtptmPtT0m9W/bPLkU7ILY7nvwpi1hahA5jrM7ppoU0IMaQWAgTD+U3rzFH40IdXNBFb8Gnqcva4w==}
+  '@sentry/types@7.70.0':
+    resolution: {integrity: sha512-rY4DqpiDBtXSk4MDNBH3dwWqfPbNBI/9GA7Y5WJSIcObBtfBKp0fzYliHJZD0pgM7d4DPFrDn42K9Iiumgymkw==}
     engines: {node: '>=8'}
 
-  '@sentry/utils@7.114.0':
-    resolution: {integrity: sha512-319N90McVpupQ6vws4+tfCy/03AdtsU0MurIE4+W5cubHME08HtiEWlfacvAxX+yuKFhvdsO4K4BB/dj54ideg==}
+  '@sentry/utils@7.70.0':
+    resolution: {integrity: sha512-0cChMH0lsGp+5I3D4wOHWwjFN19HVrGUs7iWTLTO5St3EaVbdeLbI1vFXHxMxvopbwgpeZafbreHw/loIdZKpw==}
     engines: {node: '>=8'}
 
   '@sentry/vite-plugin@3.2.0':
@@ -2942,8 +2897,8 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dotenv-cli@8.0.0:
-    resolution: {integrity: sha512-aLqYbK7xKOiTMIRf1lDPbI+Y+Ip/wo5k3eyp6ePysVaSqbyxjyK3dK35BTxG+rmd7djf5q2UPs4noPNH+cj0Qw==}
+  dotenv-cli@7.3.0:
+    resolution: {integrity: sha512-314CA4TyK34YEJ6ntBf80eUY+t1XaFLyem1k9P0sX1gn30qThZ5qZr/ZwE318gEnzyYP9yj9HJk6SqwE0upkfw==}
     hasBin: true
 
   dotenv-expand@10.0.0:
@@ -7117,44 +7072,34 @@ snapshots:
   '@sentry/cli-darwin@2.41.1':
     optional: true
 
-  '@sentry/cli-darwin@2.42.1':
-    optional: true
-
   '@sentry/cli-linux-arm64@2.41.1':
-    optional: true
-
-  '@sentry/cli-linux-arm64@2.42.1':
     optional: true
 
   '@sentry/cli-linux-arm@2.41.1':
     optional: true
 
-  '@sentry/cli-linux-arm@2.42.1':
-    optional: true
-
   '@sentry/cli-linux-i686@2.41.1':
-    optional: true
-
-  '@sentry/cli-linux-i686@2.42.1':
     optional: true
 
   '@sentry/cli-linux-x64@2.41.1':
     optional: true
 
-  '@sentry/cli-linux-x64@2.42.1':
-    optional: true
-
   '@sentry/cli-win32-i686@2.41.1':
-    optional: true
-
-  '@sentry/cli-win32-i686@2.42.1':
     optional: true
 
   '@sentry/cli-win32-x64@2.41.1':
     optional: true
 
-  '@sentry/cli-win32-x64@2.42.1':
-    optional: true
+  '@sentry/cli@2.21.1':
+    dependencies:
+      https-proxy-agent: 5.0.1
+      node-fetch: 2.7.0
+      progress: 2.0.3
+      proxy-from-env: 1.1.0
+      which: 2.0.2
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
 
   '@sentry/cli@2.41.1':
     dependencies:
@@ -7175,38 +7120,14 @@ snapshots:
       - encoding
       - supports-color
 
-  '@sentry/cli@2.42.1':
-    dependencies:
-      https-proxy-agent: 5.0.1
-      node-fetch: 2.7.0
-      progress: 2.0.3
-      proxy-from-env: 1.1.0
-      which: 2.0.2
-    optionalDependencies:
-      '@sentry/cli-darwin': 2.42.1
-      '@sentry/cli-linux-arm': 2.42.1
-      '@sentry/cli-linux-arm64': 2.42.1
-      '@sentry/cli-linux-i686': 2.42.1
-      '@sentry/cli-linux-x64': 2.42.1
-      '@sentry/cli-win32-i686': 2.42.1
-      '@sentry/cli-win32-x64': 2.42.1
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-
-  '@sentry/core@7.114.0':
-    dependencies:
-      '@sentry/types': 7.114.0
-      '@sentry/utils': 7.114.0
-
   '@sentry/core@9.1.0': {}
 
-  '@sentry/integrations@7.114.0':
+  '@sentry/integrations@7.70.0':
     dependencies:
-      '@sentry/core': 7.114.0
-      '@sentry/types': 7.114.0
-      '@sentry/utils': 7.114.0
+      '@sentry/types': 7.70.0
+      '@sentry/utils': 7.70.0
       localforage: 1.10.0
+      tslib: 2.8.1
 
   '@sentry/node@9.1.0':
     dependencies:
@@ -7264,11 +7185,12 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 18.3.1
 
-  '@sentry/types@7.114.0': {}
+  '@sentry/types@7.70.0': {}
 
-  '@sentry/utils@7.114.0':
+  '@sentry/utils@7.70.0':
     dependencies:
-      '@sentry/types': 7.114.0
+      '@sentry/types': 7.70.0
+      tslib: 2.8.1
 
   '@sentry/vite-plugin@3.2.0':
     dependencies:
@@ -8335,7 +8257,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dotenv-cli@8.0.0:
+  dotenv-cli@7.3.0:
     dependencies:
       cross-spawn: 7.0.6
       dotenv: 16.4.7
