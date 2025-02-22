@@ -39,6 +39,7 @@
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "@sentry/integrations": "^7.114.0",
+    "@sentry/node": "^9.1.0",
     "@trpc/server": "^10.45.2",
     "@vscode_frontend/shared": "workspace:*",
     "@vscode_frontend/webapp": "workspace:*",

@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
         ? undefined
         : sentryVitePlugin({
             org: 'myownworldproject',
-            project: 'webapp',
+            project: 'javascript-react',
             authToken: env.SENTRY_AUTH_TOKEN,
             release: { name: env.SOURCE_VERSION },
           }),
