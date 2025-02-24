@@ -1,4 +1,5 @@
 import { type Idea, type User } from '@prisma/client'
+import { omit } from '@vscode_frontend/shared/src/omit'
 import _ from 'lodash'
 import { createAppContext } from '../lib/ctx'
 import { env } from '../lib/env'
@@ -50,7 +51,7 @@ export const createUser = async ({ user = {}, number = 1 }: { user?: Partial<Use
       nick: `user${number}`,
       email: `user${number}@example.com`,
       password: getPasswordHash(user.password || '1234'),
-      ..._.omit(user, ['password']),
+      ...omit(user, ['password']),
     },
   })
 }

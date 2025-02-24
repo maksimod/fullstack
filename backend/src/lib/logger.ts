@@ -1,5 +1,6 @@
 import { EOL } from 'os'
 import { TRPCError } from '@trpc/server'
+import { omit } from '@vscode_frontend/shared/src/omit'
 import debug from 'debug'
 import _ from 'lodash'
 import { serializeError } from 'serialize-error'
@@ -68,7 +69,7 @@ export const winstonLogger = winston.createLogger({
               const levelAndType = `${logData.level} ${logData.logType}`
               const topMessage = `${setColor(levelAndType)} ${color.green(logData.timestamp)}${EOL}${logData.message}`
 
-              const visibleMessageTags = _.omit(logData, [
+              const visibleMessageTags = omit(logData, [
                 'level',
                 'logType',
                 'timestamp',
