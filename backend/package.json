@@ -50,6 +50,7 @@
     "@vscode_frontend/webapp": "workspace:*",
     "axios": "^1.7.9",
     "chalk": "^5.4.1",
+    "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
     "cron": "^4.0.0",
     "debug": "^4.4.0",
