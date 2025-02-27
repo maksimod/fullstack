@@ -1,7 +1,8 @@
 import type { TrpcRouterOutput } from '@vscode_frontend/backend/src/router'
 import { canBlockIdeas, canEditIdea } from '@vscode_frontend/backend/src/utils/can'
-import { getAvatarUrl } from '@vscode_frontend/shared/src/cloudinary'
+import { getAvatarUrl, getCloudinaryUploadUrl } from '@vscode_frontend/shared/src/cloudinary'
 import { format } from 'date-fns/format'
+import ImageGallery from 'react-image-gallery'
 import { Alert } from '../../../components/Alert'
 import { Button, LinkButton } from '../../../components/Button'
 import { FormItems } from '../../../components/FormItems'
@@ -99,6 +100,18 @@ export const ViewIdeaPage = withPageWrapper({
         {idea.author.name ? ` (${idea.author.name})` : ''}
       </div>
     </div>
+    {!!idea.images.length && (
+      <div className={css.gallery}>
+        <ImageGallery
+          showPlayButton={false}
+          showFullscreenButton={false}
+          items={idea.images.map((image) => ({
+            original: getCloudinaryUploadUrl(image, 'image', 'large'),
+            thumbnail: getCloudinaryUploadUrl(image, 'image', 'preview'),
+          }))}
+        />
+      </div>
+    )}
     <div className={css.text} dangerouslySetInnerHTML={{ __html: formatText(idea.text) }} />
     <div className={css.likes}>
       Pain: {idea.likesCount}

@@ -41,5 +41,8 @@
     "lint": "concurrently 'pnpm b lint' 'pnpm w lint' 'pnpm sh lint'",
     "lint:fix": "concurrently 'pnpm b lint:fix' 'pnpm w lint:fix'",
     "prepare": "husky"
+  },
+  "dependencies": {
+    "react-image-gallery": "^1.4.0"
   }
 }

@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      react-image-gallery:
+        specifier: ^1.4.0
+        version: 1.4.0(react@18.3.1)
     devDependencies:
       '@trpc/react-query':
         specifier: ^10.45.2
@@ -301,6 +305,9 @@ importers:
       react-icons:
         specifier: ^5.4.0
         version: 5.4.0(react@18.3.1)
+      react-image-gallery:
+        specifier: ^1.4.0
+        version: 1.4.0(react@18.3.1)
       react-infinite-scroller:
         specifier: ^1.2.6
         version: 1.2.6(react@18.3.1)
@@ -338,6 +345,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.5
         version: 18.3.5(@types/react@18.3.18)
+      '@types/react-image-gallery':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@types/react-infinite-scroller':
         specifier: ^1.2.5
         version: 1.2.5
@@ -347,6 +357,9 @@ importers:
       globals:
         specifier: ^15.14.0
         version: 15.14.0
+      image-gallery:
+        specifier: ^0.3.1
+        version: 0.3.1
       include-media:
         specifier: ^2.0.0
         version: 2.0.0
@@ -2384,6 +2397,9 @@ packages:
     peerDependencies:
       '@types/react': ^18.0.0
 
+  '@types/react-image-gallery@1.2.4':
+    resolution: {integrity: sha512-H0xpmT5rlSH0qiTvcUDCPDLRBi3J3Xa4COqaDqGb7ffLFpQoPAxpZdNuKCuThhFI0xJmNnMubZiD6B3kCBHtcw==}
+
   '@types/react-infinite-scroller@1.2.5':
     resolution: {integrity: sha512-fJU1jhMgoL6NJFrqTM0Ob7tnd2sQWGxe2ESwiU6FZWbJK/VO/Er5+AOhc+e2zbT0dk5pLygqctsulOLJ8xnSzw==}
 
@@ -3198,6 +3214,9 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
+  domify@1.4.2:
+    resolution: {integrity: sha512-m4yreHcUWHBncGVV7U+yQzc12vIlq0jMrtHZ5mW6dQMiL/7skSYNVX9wqKwOtyO9SGCgevrAFEgOCAHmamHTUA==}
+
   domutils@2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
 
@@ -3584,6 +3603,10 @@ packages:
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
+  events@1.1.1:
+    resolution: {integrity: sha512-kEcvvCBByWXGnZy6JUlgAp2gBIUjfCAV6P6TgT1/aaQKcmuAEC4OZTV1I4EWQLz2gxZw76atuVyvHhTxvi0Flw==}
+    engines: {node: '>=0.4.x'}
+
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -3945,6 +3968,13 @@ packages:
   ignore@7.0.3:
     resolution: {integrity: sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA==}
     engines: {node: '>= 4'}
+
+  image-gallery@0.3.1:
+    resolution: {integrity: sha512-yV0IxnTDV3zi13CoZXCadyA59uAPPnruvMUYuBFyXEYoe60BUrJsQgvRyeYYkd8djHFa6EBbMwjt3ZXCHuL7BA==}
+
+  image-layout@0.4.1:
+    resolution: {integrity: sha512-rM+PvapqoBifZUZy37T4NwVANBGYPuVdIPuOkIFRXQ9Dh3rKG0HTm9+IiPsERkBn49rpsF4Sr1a7FscR2dmqiQ==}
+    engines: {node: '>=0.8.0'}
 
   immediate@3.0.6:
     resolution: {integrity: sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==}
@@ -5170,6 +5200,11 @@ packages:
     resolution: {integrity: sha512-7eltJxgVt7X64oHh6wSWNwwbKTCtMfK35hcjvJS0yxEAhPM8oUKdS3+kqaW1vicIltw+kR2unHaa12S9pPALoQ==}
     peerDependencies:
       react: '*'
+
+  react-image-gallery@1.4.0:
+    resolution: {integrity: sha512-m7xLq7+g6/xh+BhVMAxvRU0132sNcEFglYsVsgthrnItl9VtLE7MuVvVWD9pvzcI+WBP5+p9HvnRwIiyhPkBDg==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react-infinite-scroller@1.2.6:
     resolution: {integrity: sha512-mGdMyOD00YArJ1S1F3TVU9y4fGSfVVl6p5gh/Vt4u99CJOptfVu/q5V/Wlle72TMgYlBwIhbxK5wF0C/R33PXQ==}
@@ -8437,6 +8472,10 @@ snapshots:
     dependencies:
       '@types/react': 18.3.18
 
+  '@types/react-image-gallery@1.2.4':
+    dependencies:
+      '@types/react': 18.3.18
+
   '@types/react-infinite-scroller@1.2.5':
     dependencies:
       '@types/react': 18.3.18
@@ -9388,6 +9427,8 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
+  domify@1.4.2: {}
+
   domutils@2.8.0:
     dependencies:
       dom-serializer: 1.4.1
@@ -9950,6 +9991,8 @@ snapshots:
 
   eventemitter3@5.0.1: {}
 
+  events@1.1.1: {}
+
   execa@5.1.1:
     dependencies:
       cross-spawn: 7.0.6
@@ -10398,6 +10441,16 @@ snapshots:
   ignore@5.3.2: {}
 
   ignore@7.0.3: {}
+
+  image-gallery@0.3.1:
+    dependencies:
+      domify: 1.4.2
+      events: 1.1.1
+      image-layout: 0.4.1
+      inherits: 2.0.4
+      xtend: 4.0.2
+
+  image-layout@0.4.1: {}
 
   immediate@3.0.6: {}
 
@@ -11935,6 +11988,10 @@ snapshots:
       shallowequal: 1.1.0
 
   react-icons@5.4.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  react-image-gallery@1.4.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
