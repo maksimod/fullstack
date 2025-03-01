@@ -1,4 +1,5 @@
 import { Prisma, type Idea } from '@prisma/client'
+
 import { type AppContext } from '../lib/ctx'
 import { sendMostLikedIdeasEmail } from '../lib/emails'
 

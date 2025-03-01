@@ -1,4 +1,7 @@
+import { env } from './env'
+
 import { EOL } from 'os'
+
 import { TRPCError } from '@trpc/server'
 import { omit } from '@vscode_frontend/shared/src/omit'
 import debug from 'debug'
@@ -7,8 +10,9 @@ import { serializeError } from 'serialize-error'
 import { MESSAGE } from 'triple-beam'
 import winston from 'winston'
 import * as yaml from 'yaml'
+
 import { deepMap } from '../utils/deepMap'
-import { env } from './env'
+
 import { ExpectedError } from './error'
 import { sentryCaptureException } from './sentry'
 

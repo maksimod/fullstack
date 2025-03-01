@@ -1,6 +1,7 @@
+import { env } from './env'
+
 import { pick } from '@vscode_frontend/shared/src/pick'
 import axios, { type AxiosResponse } from 'axios'
-import { env } from './env'
 
 const makeRequestToBrevo = async ({
   path,

@@ -1,5 +1,7 @@
 import { omit } from '@vscode_frontend/shared/src/omit'
+
 import { trpcLoggedProcedure } from '../../../lib/trpc'
+
 import { zGetIdeasTrpcInput } from './input'
 
 export const getIdeasTrpcRoute = trpcLoggedProcedure.input(zGetIdeasTrpcInput).query(async ({ ctx, input }) => {

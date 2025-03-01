@@ -1,9 +1,6 @@
-// eslint-disable-next-line node/no-process-env
-process.env.WEBAPP_URL = 'https://example.com'
-
-// eslint-disable-next-line import/first
+import { sharedEnv } from '@vscode_frontend/shared/src/env'
 import { pgr } from './pumpGetRoute'
-
+sharedEnv.WEBAPP_URL = 'https://example.com'
 describe('pgr', () => {
   it('return simple route', () => {
     const getSimpleRoute = pgr(() => '/simple')

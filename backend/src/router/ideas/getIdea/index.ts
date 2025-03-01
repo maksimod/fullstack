@@ -1,6 +1,8 @@
 import { omit } from '@vscode_frontend/shared/src/omit'
+
 import { ExpectedError } from '../../../lib/error'
 import { trpcLoggedProcedure } from '../../../lib/trpc'
+
 import { zGetIdeaTrpcInput } from './input'
 
 export const getIdeaTrpcRoute = trpcLoggedProcedure.input(zGetIdeaTrpcInput).query(async ({ ctx, input }) => {

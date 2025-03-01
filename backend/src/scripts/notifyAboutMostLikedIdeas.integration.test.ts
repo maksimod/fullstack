@@ -1,5 +1,7 @@
-import { startOfMonth, sub } from 'date-fns'
 import { appContext, createIdeaLike, createIdeaWithAuthor, withoutNoize } from '../test/integration'
+
+import { startOfMonth, sub } from 'date-fns'
+
 import { getMostLikedIdeas } from './notifyAboutMostLikedIdeas'
 
 describe('getMostLikedIdeas', () => {

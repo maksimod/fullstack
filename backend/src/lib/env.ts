@@ -1,6 +1,7 @@
 /* eslint-disable node/no-process-env */
 import fs from 'fs'
 import path from 'path'
+
 import { zEnvHost, zEnvNonemptyTrimmed, zEnvNonemptyTrimmedRequiredOnNotLocal } from '@vscode_frontend/shared/src/zod'
 import * as dotenv from 'dotenv'
 import { z } from 'zod'

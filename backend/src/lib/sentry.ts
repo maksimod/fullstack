@@ -1,8 +1,10 @@
 // import path from 'path'
 // import { RewriteFrames } from '@sentry/integrations'
 
-import * as Sentry from '@sentry/node'
 import { env } from './env'
+
+import * as Sentry from '@sentry/node'
+
 import { type LoggerMetaData } from './logger'
 
 const isSentryEnabled = env.BACKEND_SENTRY_DSN && env.NODE_ENV !== 'test'
