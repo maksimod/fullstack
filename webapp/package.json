@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:host": "vite --host myownworldproject.ru --port 4002",
     "test": "dotenv -e .env.test -e .env jest",
     "build": "tsc -b && vite build",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx .",

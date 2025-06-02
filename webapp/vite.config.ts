@@ -15,27 +15,21 @@ export default defineConfig(({ mode }) => {
     return acc
   }, {})
 
-  if (env.HOST_ENV !== 'local') {
-    if (!env.SENTRY_AUTH_TOKEN) {
-      throw new Error('SENTRY_AUTH_TOKEN is not defined')
-    }
-    if (!env.SOURCE_VERSION) {
-      throw new Error('SOURCE_VERSION is not defined')
-    }
-  }
+  // Убираем проверку SENTRY_AUTH_TOKEN для режимов, отличных от production
+  const useSentry = env.HOST_ENV === 'production' && env.SENTRY_AUTH_TOKEN && env.SOURCE_VERSION
 
   return {
     plugins: [
       react(),
       svgr(),
-      !env.SENTRY_AUTH_TOKEN
-        ? undefined
-        : sentryVitePlugin({
+      useSentry
+        ? sentryVitePlugin({
             org: 'myownworldproject',
             project: 'javascript-react',
             authToken: env.SENTRY_AUTH_TOKEN,
             release: { name: env.SOURCE_VERSION },
-          }),
+          })
+        : undefined,
     ],
     build: {
       sourcemap: true,
@@ -44,9 +38,40 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       port: +env.PORT,
+      host: true,
+      force: true,
+      strictPort: true,
+      cors: {
+        origin: '*',
+      },
+      hmr: {
+        host: 'localhost',
+      },
+      proxy: {
+        '/api': {
+          target: 'http://localhost:4001',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+      allowedHosts: ['localhost', 'myownworldproject.ru', 'www.myownworldproject.ru', 'api.myownworldproject.ru', '*'],
     },
     preview: {
       port: +env.PORT,
+      host: true,
+      force: true,
+      strictPort: true,
+      cors: {
+        origin: '*',
+      },
+      proxy: {
+        '/api': {
+          target: 'http://localhost:4001',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+      allowedHosts: ['localhost', 'myownworldproject.ru', 'www.myownworldproject.ru', 'api.myownworldproject.ru', '*'],
     },
     define: {
       'process.env': publicEnv,

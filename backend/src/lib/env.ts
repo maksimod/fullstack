@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import { zEnvHost, zEnvNonemptyTrimmed, zEnvNonemptyTrimmedRequiredOnNotLocal } from '@vscode_frontend/shared/src/zod'
+import { zEnvHost, zEnvNonemptyTrimmed } from '@vscode_frontend/shared/src/zod'
 import * as dotenv from 'dotenv'
 import { z } from 'zod'
 
@@ -38,7 +38,7 @@ const zEnv = z.object({
   PASSWORD_SALT: zEnvNonemptyTrimmed,
   INITIAL_ADMIN_PASSWORD: zEnvNonemptyTrimmed,
   WEBAPP_URL: zEnvNonemptyTrimmed,
-  BREVO_API_KEY: zEnvNonemptyTrimmedRequiredOnNotLocal,
+  BREVO_API_KEY: zEnvNonemptyTrimmed.optional(),
   FROM_EMAIL_NAME: zEnvNonemptyTrimmed,
   FROM_EMAIL_ADDRESS: zEnvNonemptyTrimmed,
   DEBUG: z
@@ -48,10 +48,10 @@ const zEnv = z.object({
       (val) => process.env.HOST_ENV === 'local' || process.env.NODE_ENV !== 'production' || (!!val && val.length > 0),
       'Required on not local host on production',
     ),
-  BACKEND_SENTRY_DSN: zEnvNonemptyTrimmedRequiredOnNotLocal,
-  SOURCE_VERSION: zEnvNonemptyTrimmedRequiredOnNotLocal,
-  CLOUDINARY_API_KEY: zEnvNonemptyTrimmedRequiredOnNotLocal,
-  CLOUDINARY_API_SECRET: zEnvNonemptyTrimmedRequiredOnNotLocal,
+  BACKEND_SENTRY_DSN: zEnvNonemptyTrimmed.optional(),
+  SOURCE_VERSION: zEnvNonemptyTrimmed.optional(),
+  CLOUDINARY_API_KEY: zEnvNonemptyTrimmed.optional(),
+  CLOUDINARY_API_SECRET: zEnvNonemptyTrimmed.optional(),
   CLOUDINARY_CLOUD_NAME: zEnvNonemptyTrimmed,
 })
 
